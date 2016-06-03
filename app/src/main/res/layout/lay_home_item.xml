@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_shadow">
+
+        <ImageView
+            android:id="@+id/lay_home_item_img"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/apartment"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="4dp"
+            android:padding="2dp"
+            android:background="@drawable/price_back">
+
+            <TextView
+                android:id="@+id/lay_home_item_txt_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#fefefe"
+                android:text="20"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:textSize="20sp"
+                android:textColor="#fefefe"
+                android:text="Lks"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:textSize="16sp"
+                android:textColor="#fefefe"
+                android:text="/MONTH"/>
+
+        </LinearLayout>
+
+        <!--<TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:textColor="#fefefe"
+            android:text="RENT"
+            android:gravity="center"
+            android:layout_margin="4dp"
+            android:padding="2dp"
+            android:background="@drawable/price_back"/>
+-->
+        <jp.shts.android.library.TriangleLabelView
+            android:id="@+id/lay_home_item_txt_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            app:backgroundColor="#ffa500"
+            app:corner="rightTop"
+            app:labelBottomPadding="14dp"
+            app:labelCenterPadding="14dp"
+            app:labelTopPadding="14dp"
+            app:primaryText="RENT"
+            app:primaryTextColor="#191970"
+            app:primaryTextSize="20sp"
+            />
+        <!--app:secondaryText="CONDO"
+        app:secondaryTextColor="#708090"
+            app:secondaryTextSize="11sp"-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_alignBottom="@+id/lay_home_item_img"
+            android:background="@drawable/price_back">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <!--<ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_location"/>-->
+
+                <TextView
+                    android:id="@+id/lay_home_item_txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#fefefe"
+                    android:textStyle="bold"
+                    android:text="Kabaaye Villa"/>
+
+                <TextView
+                    android:id="@+id/lay_home_item_txt_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#fefefe"
+                    android:text="Mayangone Tsps,Yangon"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lay_home_item_txt_bed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="#fefefe"
+                        android:textStyle="bold"
+                        android:text="3"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#fefefe"
+                        android:text="Beds"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginRight="6dp"
+                    android:background="#50fefefe"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lay_home_item_txt_bath"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="#fefefe"
+                        android:textStyle="bold"
+                        android:text="2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#fefefe"
+                        android:text="Baths"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginRight="6dp"
+                    android:background="#50fefefe"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lay_home_item_txt_square"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="#fefefe"
+                        android:textStyle="bold"
+                        android:text="2,000"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#fefefe"
+                        android:text="Sq. ft."/>
+
+                </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+</RelativeLayout>

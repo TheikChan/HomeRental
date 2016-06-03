@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/switch_compat"
+            android:layout_toLeftOf="@+id/switch_compat"
+            android:text="RENT"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch_compat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:checked="false"
+            android:theme="@style/MySwitch"
+            />
+        <!--android:textOff="RENT"
+        app:showText="true"
+        android:textOn="SALE"-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/switch_compat"
+            android:layout_toRightOf="@+id/switch_compat"
+            android:text="SALE"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:text="Select Township"/>
+
+        <!-- Spinner Element -->
+        <Spinner
+            android:id="@+id/lay_filter_sp_township"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lay_filter_price_range"
+        android:layout_marginTop="4dp"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_price_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price "
+            android:textSize="22dp"/>
+
+        <Spinner
+            android:id="@+id/lay_filter_sp_min_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_filter_square_range"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_square_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Square Foot "
+            android:textSize="22dp"/>
+
+        <Spinner
+            android:id="@+id/lay_filter_sp_min_square"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"/>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#808080"
+        android:layout_margin="10dp" />
+
+
+    <!-- for bedroom -->
+
+    <LinearLayout
+        android:id="@+id/lay_filter_lay_bed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:gravity="left|center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Bedroom"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="start|center">
+
+
+            <ImageButton
+                android:id="@+id/lay_filter_btn_dec_bed"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_increase"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:rotation="180"/>
+
+
+            <TextView
+                android:id="@+id/lay_filter_lbl_bed_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="0"
+                android:textStyle="bold"/>
+
+
+
+            <ImageButton
+                android:id="@+id/lay_filter_btn_inc_bed"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_increase" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!-- for bath -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:gravity="left|center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Baths"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="start|center">
+
+
+            <ImageButton
+                android:id="@+id/lay_filter_btn_dec_bath"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_increase"
+                android:rotation="180"/>
+
+
+            <TextView
+                android:id="@+id/lay_filter_lbl_bath_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="0"
+                android:textStyle="bold"/>
+
+
+            <ImageButton
+                android:id="@+id/lay_filter_btn_inc_bath"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_increase" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="left|center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Parking"/>
+
+        <CheckBox
+            android:id="@+id/lay_filter_chk_parking"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:gravity="left"
+            android:theme="@style/MyCheckBox"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="left|center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Pets"/>
+
+        <CheckBox
+            android:id="@+id/lay_filter_chk_pet"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:gravity="left"
+            android:theme="@style/MyCheckBox"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#808080"
+        android:layout_margin="10dp" />
+
+
+</LinearLayout>

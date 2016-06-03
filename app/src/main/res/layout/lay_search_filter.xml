@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:rsb="http://schemas.android.com/tools"
+    android:background="#fefefe"
+    android:padding="10dp">
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch_compat"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:checked="false"
+        android:textOff="RENT"
+        android:textOn="SALE"
+        app:showText="true"/>
+
+    <LinearLayout
+        android:id="@+id/lay_location"
+        android:layout_below="@id/switch_compat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lay_back"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="left|center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:text="Select Township"/>
+
+        </LinearLayout>
+
+        <!-- Spinner Element -->
+        <Spinner
+            android:id="@+id/lay_filter_sp_township"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/lay_filter_price_range"
+        android:layout_below="@id/lay_location"
+        android:background="@drawable/lay_back"
+        android:layout_marginTop="4dp"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_price_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price Range"
+            android:textSize="22dp"/>
+
+        <TextView
+            android:layout_below="@+id/text_price_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:id="@+id/lbl_price_seek_min" />
+
+        <TextView
+            android:layout_below="@+id/text_price_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/lbl_price_seek_max"
+            android:textColor="#000000"
+            android:layout_marginRight="10dp" />
+
+        <org.florescu.android.rangeseekbar.RangeSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lbl_price_seek_max"
+            android:id="@+id/lay_filter_seek_price"
+            rsb:absoluteMaxValue="30"
+            rsb:absoluteMinValue="0"
+            rsb:thumbDisabled="@drawable/custom_slider_thumb"
+            rsb:thumbNormal="@drawable/custom_slider_thumb"
+            rsb:thumbPressed="@drawable/custom_slider_thumb"
+            rsb:thumbShadow="true"
+            rsb:thumbShadowBlur="3dp"
+            rsb:thumbShadowColor="@color/primary_material_light"
+            rsb:thumbShadowXOffset="1dp"
+            rsb:thumbShadowYOffset="2dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_filter_square_range"
+        android:layout_below="@id/lay_filter_price_range"
+        android:background="@drawable/lay_back"
+        android:layout_marginTop="4dp"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_square_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Square Foot Range"
+            android:textSize="22dp"/>
+
+        <TextView
+            android:layout_below="@+id/text_square_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:id="@+id/lbl_square_seek_min" />
+
+        <TextView
+            android:layout_below="@+id/text_square_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/lbl_square_seek_max"
+            android:textColor="#000000"
+            android:layout_marginRight="10dp" />
+
+        <org.florescu.android.rangeseekbar.RangeSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lbl_square_seek_max"
+            android:id="@+id/lay_filter_seek_square"
+            rsb:absoluteMaxValue="30"
+            rsb:absoluteMinValue="0"
+            rsb:thumbDisabled="@drawable/custom_slider_thumb"
+            rsb:thumbNormal="@drawable/custom_slider_thumb"
+            rsb:thumbPressed="@drawable/custom_slider_thumb"
+            rsb:thumbShadow="true"
+            rsb:thumbShadowBlur="3dp"
+            rsb:thumbShadowColor="@color/primary_material_light"
+            rsb:thumbShadowXOffset="1dp"
+            rsb:thumbShadowYOffset="2dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="20dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center"
+        android:layout_below="@id/lay_filter_square_range">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Bedroom"/>
+
+        <NumberPicker
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:id="@+id/numberPicker"
+            android:layout_below="@+id/lay_filter_square_range"
+            android:layout_alignRight="@+id/lay_filter_square_range"
+            android:layout_alignEnd="@+id/lay_filter_square_range" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

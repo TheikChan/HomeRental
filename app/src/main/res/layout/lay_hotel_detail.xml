@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!--android:fitsSystemWindows="true"-->
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <!--app:contentScrim="?attr/colorPrimary"-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_collapseMode="parallax">
+
+                <ImageView
+                    android:id="@+id/lay_hotel_detail_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:layout_collapseMode="parallax"
+                    android:src="@drawable/img_villa" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true">
+
+                    <jp.shts.android.library.TriangleLabelView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:backgroundColor="#ffa500"
+                        app:corner="rightTop"
+                        app:labelBottomPadding="14dp"
+                        app:labelCenterPadding="14dp"
+                        app:labelTopPadding="14dp"
+                        app:primaryText="RENT"
+                        app:primaryTextColor="#191970"
+                        app:primaryTextSize="20sp"
+                        />
+
+                    <!--<android.support.design.widget.FloatingActionButton
+                        android:id="@+id/fab_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:src="@android:drawable/sym_action_email" />
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/fab_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:src="@android:drawable/stat_sys_phone_call" />-->
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="8dp"
+                    app:layout_collapseMode="parallax"
+                    android:layout_marginTop="2dp"
+
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#fefefe"
+                            android:text="Thu Kha Street "
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginStart="16dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:textColor="#fefefe"
+                            android:text="Hlaing , Yangon "
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginStart="24dp"/>
+
+                    <!--<LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="4dp"
+                        android:padding="2dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="#fefefe"
+                            android:text="20"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="4dp"
+                            android:textSize="20sp"
+                            android:textColor="#fefefe"
+                            android:text="Lks"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="4dp"
+                            android:textSize="16sp"
+                            android:textColor="#fefefe"
+                            android:text="/MONTH"/>
+
+                    </LinearLayout>-->
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/lay_hotel_detail_info" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/stat_sys_phone_call"
+        app:rippleColor="#ff0000"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end" />
+
+</android.support.design.widget.CoordinatorLayout>
